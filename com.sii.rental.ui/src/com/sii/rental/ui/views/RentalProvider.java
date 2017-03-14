@@ -6,6 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
@@ -28,7 +29,7 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	
 	@PostConstruct
 	public void init() {
-		
+
 	}
 		
 	@Override

@@ -3,8 +3,11 @@ package com.sii.rental.ui.views;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import javax.inject.Named;
 
+import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.Focus;
+import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
@@ -24,24 +27,32 @@ public class RentalPart {
 	@Inject
 	private ESelectionService localSelectionService;
 	
-	@PostConstruct
-	public void createUi(Composite parent, RentalAgency a) {
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	@Inject 
+	public void RentalPart(Composite parent, RentalAgency a) {
 		parent.setLayout(new GridLayout(1, false));
 		
 		Group infoGroup = new Group(parent, SWT.NONE);
 		infoGroup.setText("Information");
 		infoGroup.setLayout(new GridLayout(2, false));
+		GridData gd = new GridData();
+		gd.horizontalAlignment = SWT.FILL;
+		gd.grabExcessHorizontalSpace = true;
+		infoGroup.setLayoutData(gd);
 		
 		rentedObjectLabel = new Label(infoGroup, SWT.NONE);
-		GridData gd = new GridData();
+		 gd = new GridData();
 		gd.horizontalSpan = 2;
 		gd.horizontalAlignment = SWT.FILL;
+		gd.grabExcessHorizontalSpace = true;
 		rentedObjectLabel.setLayoutData(gd);
 		rentedObjectLabel.setText("toto");
 		
 		customerLabel = new Label(infoGroup, SWT.NONE);
 		customerLabel.setText("tata");
-		new Label(infoGroup, SWT.NONE);
+		customerLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 		
 		dateGroup = new Group(parent, SWT.NONE);
 		dateGroup.setText("Date");
@@ -65,8 +76,6 @@ public class RentalPart {
 		endDateEntry = new Label(dateGroup, SWT.NONE);
 		endDateEntry.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false, 1, 1));
 		endDateEntry.setBounds(0, 0, 55, 15);
-
-		this.setRental(a.getRentals().get(0));
 	}
 	
 	public void setRental(Rental r)
@@ -76,9 +85,17 @@ public class RentalPart {
 		startDateEntry.setText(r.getStartDate().toString());
 		endDateEntry.setText(r.getEndDate().toString());
 	}
+	
+	@Inject @Optional
+	public void receivedSelection(@Named(IServiceConstants.ACTIVE_SELECTION) Rental r)
+	{
+		if(r != null)
+			this.setRental(r);
+	}
 
 	@Focus
 	public void onFocus() {
-		rentedObjectLabel.setFocus();
+		if(rentedObjectLabel != null)
+			rentedObjectLabel.setFocus();
 	}
 }
