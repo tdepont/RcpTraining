@@ -3,21 +3,29 @@ package com.sii.rental.ui.views;
 import java.util.Collection;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+import javax.inject.Named;
 
+import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
 
 import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.Rental;
 import com.opcoach.training.rental.RentalAgency;
 import com.opcoach.training.rental.RentalObject;
+import com.sii.rental.ui.RentalUIConstants;
 
-public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider {
+public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider, RentalUIConstants {
 
+	@Inject @Named(RENTAL_UI_IMG_REGISTRY)
+	private ImageRegistry registry;
+	
 	@PostConstruct
 	public void init() {
 		
@@ -71,6 +79,18 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		return super.getText(element);
 	}
 	
+	@Override
+	public Image getImage(Object element) {
+		if (element instanceof RentalAgency)
+			return registry.get(IMG_AGENCY);
+		if (element instanceof Customer)
+			return registry.get(IMG_CUSTOMER);
+		else if (element instanceof RentalObject)
+			return registry.get(IMG_RENTAL_OBJECT);
+		else if (element instanceof Rental)
+			return registry.get(IMG_RENTAL);
+		return null;
+	}
 	
 	@Override
 	public Color getForeground(Object element) {
@@ -88,8 +108,7 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	public Color getBackground(Object element) {
 		return  Display.getCurrent().getSystemColor(SWT.COLOR_DARK_GRAY);
 	}
-	
-	
+		
 	class Node {
 		private static final String OBJECTS_À_LOUER = "Objects à louer";
 		private static final String LOCATIONS = "Locations";
@@ -116,8 +135,4 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		@Override
 		public String toString() {return title;}
 	}
-
-
-
-	
 }
