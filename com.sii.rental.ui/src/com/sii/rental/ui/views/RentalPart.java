@@ -43,7 +43,7 @@ public class RentalPart {
 		infoGroup.setLayoutData(gd);
 		
 		rentedObjectLabel = new Label(infoGroup, SWT.NONE);
-		 gd = new GridData();
+		gd = new GridData();
 		gd.horizontalSpan = 2;
 		gd.horizontalAlignment = SWT.FILL;
 		gd.grabExcessHorizontalSpace = true;
