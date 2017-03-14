@@ -2,8 +2,10 @@
 package com.sii.rental.ui.views;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 import org.eclipse.e4.ui.di.Focus;
+import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -12,16 +14,18 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 
 import com.opcoach.training.rental.Rental;
-import com.sii.rental.core.RentalCoreActivator;
-import org.eclipse.swt.widgets.DateTime;
+import com.opcoach.training.rental.RentalAgency;
 
 public class RentalPart {
 
-	private Label rentedObjectLabel, customerLabel, startDateLabel,endDateLabel, startDateEntry, endDateEntry;
+	private Label rentedObjectLabel, customerLabel, startDateEntry, endDateEntry;
 	private Group dateGroup;
 	
+	@Inject
+	private ESelectionService localSelectionService;
+	
 	@PostConstruct
-	public void createUi(Composite parent) {
+	public void createUi(Composite parent, RentalAgency a) {
 		parent.setLayout(new GridLayout(1, false));
 		
 		Group infoGroup = new Group(parent, SWT.NONE);
@@ -61,8 +65,8 @@ public class RentalPart {
 		endDateEntry = new Label(dateGroup, SWT.NONE);
 		endDateEntry.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false, 1, 1));
 		endDateEntry.setBounds(0, 0, 55, 15);
-		
-		this.setRental(RentalCoreActivator.getAgency().getRentals().get(0));
+
+		this.setRental(a.getRentals().get(0));
 	}
 	
 	public void setRental(Rental r)
