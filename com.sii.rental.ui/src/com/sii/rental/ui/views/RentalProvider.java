@@ -22,37 +22,25 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	public Object[] getElements(Object inputElement) {
 		
 		if(inputElement instanceof Collection<?>)
-		{
 			return ((Collection) inputElement).toArray(); 
-		}
 		else
-		{
 			return null;	
-		}
 	}
 	
 	@Override
 	public Object[] getChildren(Object parentElement) {
 		if(parentElement instanceof RentalAgency)
-		{
 			return ((RentalAgency) parentElement).getCustomers().toArray();
-		}
-		else
-		{
+		else 
 			return null;
-		}
 	}
 	
 	@Override
 	public Object getParent(Object element) {
 		//if(element instanceof EObject)
-		//{
 		//	return (EObject) element.eContainer();
-		//}
 		//else
-		//{
 			return null;
-		//}
 	}
 	
 	@Override
@@ -63,16 +51,10 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	@Override
 	public String getText(Object element) {
 		if(element instanceof RentalAgency)
-		{
 			return ((RentalAgency) element).getName();
-		}
 		else if (element instanceof Customer)
-		{
 			return ((Customer) element).getDisplayName();
-		}
 		else
-		{
 			return super.getText(element);
-		}
 	}
 }
