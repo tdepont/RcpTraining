@@ -1,13 +1,17 @@
 package com.sii.rental.ui;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 import org.eclipse.e4.core.contexts.IEclipseContext;
+import org.eclipse.e4.core.di.annotations.Optional;
+import org.eclipse.e4.ui.di.UIEventTopic;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.FrameworkUtil;
 
+import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.RentalAgency;
 import com.sii.rental.core.RentalCoreActivator;
 
@@ -30,5 +34,11 @@ public class RentalUiAddon implements RentalUIConstants {
 		reg.put(IMG_AGENCY, ImageDescriptor.createFromURL(b.getEntry(IMG_AGENCY)));
 		
 		return reg;
+	}
+	
+	@Inject
+	@Optional
+	private void print(@UIEventTopic(EVENT_CUSTOMER) Customer c) {
+		System.out.println("Copie du client : " + c.getDisplayName());
 	}
 }

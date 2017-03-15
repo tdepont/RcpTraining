@@ -32,4 +32,8 @@ public interface RentalUIConstants {
 	public static final String FONT_RENTAL_OBJECT  = "rentalObjectKey";
 	
 	public static final String  RENTAL_UI_IMG_REGISTRY = "RentalUiImgRegistry";
+	
+	public static final String EVENT_CUSTOMER = "rentalUi/customer";
+	public static final String EVENT_RENTAL_OBJECT = "rentalUi/rental_object";
+	public static final String EVENT_RENTAL = "rentalUi/rental";
 }
