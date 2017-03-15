@@ -135,6 +135,36 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	}
 		
 	class Node {
+		
+		private static final String OBJECTS_À_LOUER = "Objects à louer";
+		private static final String LOCATIONS = "Locations";
+		private static final String CUSTOMER = "Customer";
+		private String title; 
+		private RentalAgency a;
+		
+		public Node(String title, RentalAgency a) {
+			super();
+			this.title = title;
+			this.a = a;
+		}
+		
+		public Object[] getChildren() {
+			if(title == CUSTOMER)
+				return a.getCustomers().toArray();
+			if(title == LOCATIONS)
+				return a.getRentals().toArray();
+			if(title == OBJECTS_À_LOUER)
+				return a.getObjectsToRent().toArray();
+			return null;
+		}
+		
+		@Override
+		public String toString() {return title;}
+
+		private RentalProvider getOuterType() {
+			return RentalProvider.this;
+		}
+		
 		@Override
 		public int hashCode() {
 			final int prime = 31;
@@ -167,35 +197,6 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 			} else if (!title.equals(other.title))
 				return false;
 			return true;
-		}
-
-		private static final String OBJECTS_À_LOUER = "Objects à louer";
-		private static final String LOCATIONS = "Locations";
-		private static final String CUSTOMER = "Customer";
-		private String title; 
-		private RentalAgency a;
-		
-		public Node(String title, RentalAgency a) {
-			super();
-			this.title = title;
-			this.a = a;
-		}
-		
-		public Object[] getChildren() {
-			if(title == CUSTOMER)
-				return a.getCustomers().toArray();
-			if(title == LOCATIONS)
-				return a.getRentals().toArray();
-			if(title == OBJECTS_À_LOUER)
-				return a.getObjectsToRent().toArray();
-			return null;
-		}
-		
-		@Override
-		public String toString() {return title;}
-
-		private RentalProvider getOuterType() {
-			return RentalProvider.this;
 		}
 	}
 }
