@@ -18,16 +18,14 @@ public class copyCustomer {
 	@Execute
 	public void copyExe(@Named(IServiceConstants.ACTIVE_SELECTION) Customer c) {
 		Clipboard clipboard = new Clipboard(Display.getCurrent());
-		
-		
-			String textData = c.getDisplayName();
-			String rtfData = "{\\rtf1\\b\\i " + textData + "}";
-			TextTransfer textTransfer = TextTransfer.getInstance();
-			RTFTransfer rtfTransfer = RTFTransfer.getInstance();
-			Transfer[] transfers = new Transfer[]{textTransfer, rtfTransfer};
-			Object[] data = new Object[]{textData, rtfData};
-			clipboard.setContents(data, transfers);
-			clipboard.dispose();	
+		String textData = c.getDisplayName();
+		String rtfData = "{\\rtf1\\b\\i " + textData + "}";
+		TextTransfer textTransfer = TextTransfer.getInstance();
+		RTFTransfer rtfTransfer = RTFTransfer.getInstance();
+		Transfer[] transfers = new Transfer[]{textTransfer, rtfTransfer};
+		Object[] data = new Object[]{textData, rtfData};
+		clipboard.setContents(data, transfers);
+		clipboard.dispose();	
 	}
 	
 	@CanExecute
