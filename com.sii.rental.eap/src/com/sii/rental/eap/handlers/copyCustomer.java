@@ -21,7 +21,7 @@ public class copyCustomer {
 		
 		
 			String textData = c.getDisplayName();
-			String rtfData = "{\\rtf1\\b\\i" + textData + "}";
+			String rtfData = "{\\rtf1\\b\\i " + textData + "}";
 			TextTransfer textTransfer = TextTransfer.getInstance();
 			RTFTransfer rtfTransfer = RTFTransfer.getInstance();
 			Transfer[] transfers = new Transfer[]{textTransfer, rtfTransfer};
@@ -34,5 +34,4 @@ public class copyCustomer {
 	public boolean isok(@Named(IServiceConstants.ACTIVE_SELECTION) Object o) {
 		return o instanceof Customer;
 	}
-
 }
