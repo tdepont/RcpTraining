@@ -3,6 +3,8 @@ package com.sii.rental.ui;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.IExtensionRegistry;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.UIEventTopic;
@@ -40,5 +42,21 @@ public class RentalUiAddon implements RentalUIConstants {
 	@Optional
 	private void print(@UIEventTopic(EVENT_CUSTOMER) Customer c) {
 		System.out.println("Copie du client : " + c.getDisplayName());
+	}
+	
+	@Inject
+	private void printExtension(IExtensionRegistry ext) {
+				
+		for(IConfigurationElement lconf : ext.getConfigurationElementsFor("org.eclipse.e4.workbench.model")) {
+			if(lconf.getName().equals("fragment"))
+			{
+				String value = lconf.getAttribute("uri");
+				System.out.println("in : " + lconf.getNamespaceIdentifier() + value);	
+			}else if(lconf.getName().equals("processor"))
+			{
+				String value = lconf.getAttribute("class");
+				System.out.println("in : " + lconf.getNamespaceIdentifier() + " " + value);	
+			}
+		}
 	}
 }
