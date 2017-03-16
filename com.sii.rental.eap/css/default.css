@@ -1,0 +1,12 @@
+Tree {
+  /* actual values */
+  background-color: #5fffff;	/* declared in CSS: rgb(95, 255, 255) */
+  background-image: none;	/* declared in CSS: none */
+  color: #000000;	/* declared in CSS: rgb(0, 0, 0) */
+  font-family: "Segoe UI";	/* declared in CSS: Segoe UI */
+  font-size: 9;	/* declared in CSS: 9 */
+  font-style: normal;	/* declared in CSS: normal */
+  font-weight: normal;	/* declared in CSS: normal */
+  text-transform: none;	/* declared in CSS: none */
+  visibility: visible;	/* declared in CSS: visible */
+}
