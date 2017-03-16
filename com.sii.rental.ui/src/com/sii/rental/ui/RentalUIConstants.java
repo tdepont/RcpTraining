@@ -36,4 +36,6 @@ public interface RentalUIConstants {
 	public static final String EVENT_CUSTOMER = "rentalUi/customer";
 	public static final String EVENT_RENTAL_OBJECT = "rentalUi/rental_object";
 	public static final String EVENT_RENTAL = "rentalUi/rental";
+	
+	public static final String PALETTE_MANAGER = "rentalUi/pref_manager";
 }
