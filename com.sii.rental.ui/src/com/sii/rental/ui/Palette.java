@@ -30,6 +30,4 @@ public class Palette {
 	public void setProvider(IColorProvider provider) {
 		this.provider = provider;
 	}
-	
-	
 }

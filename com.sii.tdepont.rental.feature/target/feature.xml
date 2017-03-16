@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.sii.tdepont.rental.feature"
+      label="Feature"
+      version="1.0.0.201703161612"
+      provider-name="SII">
+
+   <description url="http://www.example.com/description">
+      Plug-in réalisé lors de la formation
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore" version="2.13.0" match="greaterOrEqual"/>
+      <import plugin="javax.inject"/>
+      <import plugin="org.eclipse.swt"/>
+      <import plugin="org.eclipse.e4.ui.model.workbench"/>
+      <import plugin="org.eclipse.e4.ui.services"/>
+      <import plugin="org.eclipse.e4.ui.workbench"/>
+      <import plugin="org.eclipse.e4.core.di"/>
+      <import plugin="org.eclipse.e4.ui.di"/>
+      <import plugin="org.eclipse.e4.core.contexts"/>
+      <import plugin="com.sii.rental.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface" version="3.13.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.services"/>
+      <import plugin="com.sii.rental.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.di" version="1.6.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.expressions" version="3.6.0" match="greaterOrEqual"/>
+      <import plugin="com.opcoach.e4.preferences" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.core.di.extensions" version="0.14.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.e4.ui.model.workbench" version="1.3.0.v20170105-1239" match="greaterOrEqual"/>
+      <import plugin="javax.annotation"/>
+   </requires>
+
+   <plugin
+         id="com.sii.rental.core"
+         download-size="78"
+         install-size="85"
+         version="1.0.0.201703161612"
+         unpack="false"/>
+
+   <plugin
+         id="com.sii.rental.eap"
+         download-size="14"
+         install-size="26"
+         version="1.0.0.201703161612"
+         unpack="false"/>
+
+   <plugin
+         id="com.sii.rental.ui"
+         download-size="26"
+         install-size="40"
+         version="1.0.0.201703161612"
+         unpack="false"/>
+
+</feature>

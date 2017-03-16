@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sii.rental.ui;singleton:=true
+Export-Package: com.sii.rental.ui,com.sii.rental.ui.views
+Bundle-Name: Ui
+Bundle-Version: 1.0.0.201703161612
+Require-Bundle: org.eclipse.core.runtime,org.eclipse.e4.ui.di,org.ecli
+ pse.swt,org.eclipse.jface;bundle-version="3.13.0",com.sii.rental.core
+ ;bundle-version="1.0.0",org.eclipse.e4.core.contexts,org.eclipse.e4.u
+ i.workbench,org.eclipse.e4.core.di;bundle-version="1.6.100",org.eclip
+ se.e4.ui.services,org.eclipse.core.expressions;bundle-version="3.6.0"
+ ,com.opcoach.e4.preferences;bundle-version="1.0.0",org.eclipse.e4.cor
+ e.di.extensions;bundle-version="0.14.0",org.eclipse.e4.ui.model.workb
+ ench;bundle-version="1.3.0.v20170105-1239"
+Bundle-ManifestVersion: 2
+Bundle-Activator: com.sii.rental.ui.RentalUIActivator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: SII
+Import-Package: javax.annotation;version="1.0.0";resolution:=optional,
+ javax.inject;version="1.0.0"
+

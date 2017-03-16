@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sii.rental.eap;singleton:=true
+Bundle-Name: Eap
+Bundle-Version: 1.0.0.201703161612
+Require-Bundle: javax.inject;bundle-version="0.0.0",org.eclipse.core.r
+ untime;bundle-version="0.0.0",org.eclipse.swt;bundle-version="0.0.0",
+ org.eclipse.e4.ui.model.workbench;bundle-version="0.0.0",org.eclipse.
+ e4.ui.services;bundle-version="0.0.0",org.eclipse.e4.ui.workbench;bun
+ dle-version="0.0.0",org.eclipse.e4.core.di;bundle-version="0.0.0",org
+ .eclipse.e4.ui.di;bundle-version="0.0.0",org.eclipse.e4.core.contexts
+ ;bundle-version="0.0.0",com.sii.rental.ui;bundle-version="1.0.0",org.
+ eclipse.jface;bundle-version="3.13.0",com.sii.rental.core,org.eclipse
+ .e4.core.services
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: SII
+

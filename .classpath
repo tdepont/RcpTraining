@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="com.sii.rental.core/src"/>
+	<classpathentry kind="src" path="com.sii.rental.eap/src"/>
+	<classpathentry kind="src" path="com.sii.rental.ui/src"/>
+	<classpathentry kind="lib" path="com.sii.rental.core/rental.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="com.sii.rental.core/bin"/>
+</classpath>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1489680739559" transient="false">
+	<site updateable="true" url="platform:/base/" enabled="true" policy="USER-EXCLUDE">
+		<feature id="org.eclipse.emf.ecore" version="2.13.0.v20170123-0427" url="features/org.eclipse.emf.ecore_2.13.0.v20170123-0427/">
+		</feature>
+		<feature id="com.sii.tdepont.rental.feature" version="1.0.0.201703161612" url="features/com.sii.tdepont.rental.feature_1.0.0.201703161612/">
+		</feature>
+		<feature id="org.eclipse.emf.common" version="2.13.0.v20170123-0427" url="features/org.eclipse.emf.common_2.13.0.v20170123-0427/">
+		</feature>
+		<feature id="org.eclipse.e4.rcp" version="1.6.0.v20170126-0932" url="features/org.eclipse.e4.rcp_1.6.0.v20170126-0932/">
+		</feature>
+	</site>
+</config>

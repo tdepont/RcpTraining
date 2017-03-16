@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.sii.tdepont.rental.feature_1.0.0.201703161454.jar" id="com.sii.tdepont.rental.feature" version="1.0.0.201703161454">
+      <category name="com.sii.tdepont.rental"/>
+   </feature>
+   <category-def name="com.sii.tdepont.rental" label="com.sii.tdepont.rental"/>
+</site>

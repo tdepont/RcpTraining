@@ -1,0 +1,60 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: genie.releng
+Created-By: Apache Maven 3.3.3
+Build-Jdk: 1.8.0_102
+
+Name: bin/win32/win32/x86/launcher.exe
+SHA-256-Digest: ZT6uyZ4zzUfkAUTHmXpjBJCRLij7Bf872Usmj6gFIys=
+
+Name: bin/gtk/linux/ppc64/launcher
+SHA-256-Digest: ePKe53rnHlGoMpGXlpQ4EKW8oaxheBjQFystm/hIwPY=
+
+Name: bin/gtk/linux/x86_64/launcher
+SHA-256-Digest: pvpyDLDqf4k1vomO/Ritf76hz3EJaz07rIW4XCoZLJA=
+
+Name: feature.xml
+SHA-256-Digest: w2+Vfoed0Ph/eo3NSZg4TgeU7u74N5BFAdzRD6jfXzQ=
+
+Name: feature.properties
+SHA-256-Digest: 2IatV1yld4y8GpGL6qyGMBP3CZ8vJzDYB/KxlE5Jozw=
+
+Name: bin/cocoa/macosx/x86_64/Eclipse.app/Contents/MacOS/launcher
+SHA-256-Digest: 6fvW+gOCXnrCJ8RndUQAiUpwbACiR+J4Z1j52XTgR8A=
+
+Name: bin/win32/win32/x86_64/eclipsec.exe
+SHA-256-Digest: Gt+AnygHsHLHMPfx6+3h3BVJdCrH2zsG5lO7lidag5Q=
+
+Name: bin/win32/win32/x86_64/launcher.exe
+SHA-256-Digest: PpBcZg5aPDE4nH3b/qL05DkCL3tnvr7uNfc77A63zVc=
+
+Name: bin/cocoa/macosx/x86_64/Eclipse.app/Contents/Info.plist
+SHA-256-Digest: +SgSMSq/9kRePFUTycFcdXFmhJWv3GYNTo3XkI1Xaz8=
+
+Name: bin/gtk/linux/x86/launcher
+SHA-256-Digest: K0u9B35HLUsc1bpvqwYxlIDltUTzbpiz4FDAqDWdHmc=
+
+Name: bin/gtk/linux/ppc64le/launcher
+SHA-256-Digest: sTwOoq/fNzH71sY6TMvcTnr/M7oJOCIZsrmv2lvhtQM=
+
+Name: build.properties
+SHA-256-Digest: SRosba3EX1mC1yeJULsciXYupuOPl4Ccj18jWFLcrBA=
+
+Name: epl-v10.html
+SHA-256-Digest: mpbQ2vmKpvtKpTDTmcdCxmEhsL2uSh9/+iLSE14d9/0=
+
+Name: bin/win32/win32/x86/eclipsec.exe
+SHA-256-Digest: tVV9GrMTVF0Iyi9v3yCZNW6F0Pbnsgn5IJtyB/YQmGE=
+
+Name: gtk_root/about.html
+SHA-256-Digest: cOOgKGgeor/JgNzo+FS6VArQx0yw4F1jPgYQNptVDYw=
+
+Name: build.xml
+SHA-256-Digest: De6Dfz6/K0mfx3PRBIuAhQYaxYEplyECCSZJeoPSXEQ=
+
+Name: license.html
+SHA-256-Digest: X315zLynvdLZ4DaYSopgxruQUUEadA3FOPNviC+YO24=
+
+Name: bin/gtk/linux/ppc/launcher
+SHA-256-Digest: 4V0nC+k3kbR+NfF9D9WzfzvhFEyTTRu2O+ZInk9k9Lc=
+
