@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.sii.group/src" modelPluginID="com.sii.group"
+    modelName="Group" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>group.ecore</foreignModel>
+  <genPackages prefix="Group" disposableProviderFactory="true" ecorePackage="group.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="group.ecore#//MusicienInstrument">
+      <genEnumLiterals ecoreEnumLiteral="group.ecore#//MusicienInstrument/Guitare"/>
+      <genEnumLiterals ecoreEnumLiteral="group.ecore#//MusicienInstrument/Batterie"/>
+      <genEnumLiterals ecoreEnumLiteral="group.ecore#//MusicienInstrument/Basse"/>
+      <genEnumLiterals ecoreEnumLiteral="group.ecore#//MusicienInstrument/Micro"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="group.ecore#//Image"/>
+    <genClasses ecoreClass="group.ecore#//Group">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference group.ecore#//Group/musiciens"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference group.ecore#//Group/album"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference group.ecore#//Group/tournee"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Group/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Group/logo"/>
+    </genClasses>
+    <genClasses ecoreClass="group.ecore#//Musiciens">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Musiciens/pseudonyme"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Musiciens/instrument"/>
+    </genClasses>
+    <genClasses ecoreClass="group.ecore#//Album">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Album/titre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Album/visuel"/>
+    </genClasses>
+    <genClasses ecoreClass="group.ecore#//Tournee">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference group.ecore#//Tournee/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Tournee/startDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Tournee/endDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Tournee/name"/>
+    </genClasses>
+    <genClasses ecoreClass="group.ecore#//Date">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Date/salleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Date/date"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference group.ecore#//Date/ville"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Date/salleAdresse"/>
+    </genClasses>
+    <genClasses ecoreClass="group.ecore#//Ville">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Ville/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute group.ecore#//Ville/pays"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
