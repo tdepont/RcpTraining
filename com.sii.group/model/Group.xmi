@@ -7,5 +7,25 @@
     xsi:schemaLocation="http://com.sii/group/1.0 group.ecore"
     name="Side">
   <musiciens
-      pseudonyme="tib"/>
+      pseudonyme="Adrian"/>
+  <musiciens
+      pseudonyme="Nico"
+      instrument="MUSICIENTINSTRUMENT_1"/>
+  <musiciens
+      pseudonyme="Slash"
+      instrument="MUSICIENINSTRUMENT_2"/>
+  <musiciens
+      pseudonyme="Clapton"/>
+  <musiciens
+      pseudonyme="Pavaroti"
+      instrument="MUSICIENINSTRUMENT_3"/>
+  <album titre="Underground"/>
+  <tournee name="World tour">
+    <date salleName="Rock school"
+        salleAdresse="Rock school">
+      <ville
+          name="Bordeaux"
+          pays="france"/>
+    </date>
+  </tournee>
 </group:Group>

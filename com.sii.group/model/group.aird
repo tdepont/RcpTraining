@@ -4,7 +4,6 @@
     <semanticResources>group.ecore</semanticResources>
     <semanticResources>group.genmodel</semanticResources>
     <semanticResources>Group.xmi</semanticResources>
-    <semanticResources>Group1.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_elUesAr6EeehY7w0TWOr-w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_eqXWwAr6EeehY7w0TWOr-w" name="group" representation="_eqXWwQr6EeehY7w0TWOr-w">

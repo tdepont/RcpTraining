@@ -5,7 +5,8 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>group.ecore</foreignModel>
-  <genPackages prefix="Group" disposableProviderFactory="true" ecorePackage="group.ecore#/">
+  <genPackages prefix="Group" basePackage="com.sii.group" disposableProviderFactory="true"
+      ecorePackage="group.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="group.ecore#//MusicienInstrument">
       <genEnumLiterals ecoreEnumLiteral="group.ecore#//MusicienInstrument/Guitare"/>
       <genEnumLiterals ecoreEnumLiteral="group.ecore#//MusicienInstrument/Batterie"/>

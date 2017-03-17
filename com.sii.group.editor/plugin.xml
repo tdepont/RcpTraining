@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated group -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.sii.group.group.presentation.GroupModelWizardID"
+            name="%_UI_GroupModelWizard_label"
+            class="com.sii.group.group.presentation.GroupModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/GroupModelFile.gif">
+         <description>%_UI_GroupModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated group -->
+      <editor
+            id="com.sii.group.group.presentation.GroupEditorID"
+            name="%_UI_GroupEditor_label"
+            icon="icons/full/obj16/GroupModelFile.gif"
+            extensions="group"
+            class="com.sii.group.group.presentation.GroupEditor"
+            contributorClass="com.sii.group.group.presentation.GroupActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
